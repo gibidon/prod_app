@@ -1,6 +1,4 @@
 import { render } from "react-dom"
-import { Counter } from "./components/Counter"
+import { App } from "./components/App"
 
-render(
-    <div><Counter/></div>,
-    document.querySelector('.root'))
+render(<App />, document.querySelector('.root'))
