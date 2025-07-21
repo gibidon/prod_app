@@ -1,10 +1,9 @@
 import { Routes, Route, Link } from "react-router-dom";
-import { Counter } from "./components/Counter";
-import { AboutPageAsync } from "./pages/AboutPage/AboutPageAsync";
-import { MainPageAsync } from "./pages/MainPage/MainPageAsync";
+import { AboutPage } from "pages/AboutPage";
+import { MainPage } from "pages/MainPage";
 import { Suspense } from "react";
-import { useTheme } from "./theme/useTheme";
-import { classNames } from "./helpers/classNames";
+import { classNames } from "../shared/config/lib/classNames/classNames";
+import { useTheme } from "app/providers/ThemeProvider";
 import './styles/index.scss'
 
 export function App() {
@@ -16,10 +15,9 @@ export function App() {
         <Link to={'/main'}>Main</Link>
         <Suspense fallback='Loading'>
             <Routes>
-                <Route path={'/about'} element={<AboutPageAsync />}/>
-                <Route path={'/main'} element={<MainPageAsync />}/>
+                <Route path={'/about'} element={<AboutPage />}/>
+                <Route path={'/main'} element={<MainPage />}/>
             </Routes>
         </Suspense>
-        <Counter />
     </div>
 }
