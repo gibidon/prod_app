@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import { classNames } from "../shared/config/lib/classNames/classNames";
 import { useTheme } from "app/providers/ThemeProvider";
 import './styles/index.scss'
+import { AppRouter } from "./providers/router";
 
 export function App() {
     const { theme, toggleTheme } = useTheme()
@@ -14,10 +15,7 @@ export function App() {
         <Link to={'/about'}>About</Link>
         <Link to={'/main'}>Main</Link>
         <Suspense fallback='Loading'>
-            <Routes>
-                <Route path={'/about'} element={<AboutPage />}/>
-                <Route path={'/main'} element={<MainPage />}/>
-            </Routes>
+           <AppRouter /> 
         </Suspense>
     </div>
 }
