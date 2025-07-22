@@ -6,16 +6,14 @@ import { classNames } from "../shared/config/lib/classNames/classNames";
 import { useTheme } from "app/providers/ThemeProvider";
 import './styles/index.scss'
 import { AppRouter } from "./providers/router";
+import { Navbar } from "widgets/navbar";
 
 export function App() {
     const { theme, toggleTheme } = useTheme()
   
-    return <div className={classNames('app',{},[theme])}>
-        <button onClick={toggleTheme}>toggle theme</button>
-        <Link to={'/about'}>About</Link>
-        <Link to={'/main'}>Main</Link>
-        <Suspense fallback='Loading'>
-           <AppRouter /> 
-        </Suspense>
-    </div>
+    return (
+        <div className={classNames('app',{},[theme])}>
+            <Navbar />
+            <AppRouter /> 
+        </div>)
 }
