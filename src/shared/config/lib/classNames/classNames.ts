@@ -5,7 +5,7 @@ export function classNames(cls: string, mods: Mods = {}, additional: Array<strin
         cls,
         ...additional.filter(Boolean),
         ...Object.entries(mods)
-            .filter(([key,value]) => value === true)
-            .map(([className]) => className)
-    ].join(' ')
+            .filter(([, value]) => value === true)
+            .map(([className]) => className),
+    ].join(' ');
 }
