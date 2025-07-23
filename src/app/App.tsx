@@ -3,9 +3,8 @@ import { useTheme } from "app/providers/ThemeProvider";
 import { AppRouter } from "./providers/router";
 import { Navbar } from "widgets/navbar";
 import { Sidebar } from "widgets/Sidebar";
-import './styles/index.scss'
 import { Suspense } from "react";
-import { useTranslation } from "react-i18next";
+import './styles/index.scss'
 
 export function App() {
     const { theme } = useTheme()
