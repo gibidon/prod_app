@@ -2,5 +2,7 @@
     "Перевод": "Translate",
     "Тест": "Test",
     "Язык": "English",
-    "Страница не найдена": "Page not found"
+    "Страница не найдена": "Page not found",
+    "Произошла ошибка":   "Oops.. error has happened..",
+    "Обновить страницу": "Reload the page" 
 }
