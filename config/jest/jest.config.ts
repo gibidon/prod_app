@@ -1,17 +1,22 @@
+import path from 'path';
 import type { Config } from '@jest/types';
 
 const config: Config.InitialOptions = {
     rootDir: '../../',
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     preset: 'ts-jest',
     testEnvironment: 'jsdom',
 
     transform: {
         '^.+\\.(ts|tsx)$': 'ts-jest',
     },
-
     moduleNameMapper: {
-        '\\.(scss|css)$': 'identity-obj-proxy',
+        '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
     },
+    modulePaths: [
+        '<rootDir>src',
+    ],
 
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
