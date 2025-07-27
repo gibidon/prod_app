@@ -2,10 +2,12 @@ import { classNames } from 'shared/config/lib/classNames/classNames';
 import React, { ButtonHTMLAttributes } from 'react';
 import cls from './Button.module.scss';
 
+/* eslint-disable no-unused-vars */
 export enum ThemeButton {
     CLEAR = 'clear',
     OUTLINE = 'outline'
 }
+/* eslint-disable no-unused-vars */
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   className?: string;
@@ -22,6 +24,7 @@ export const Button = (props: ButtonProps) => {
         <button
             type="button"
             className={classNames(cls.Button, {}, [className, cls[theme]])}
+            // eslint-disable-next-line
             {...otherProps}
         >
             {children}

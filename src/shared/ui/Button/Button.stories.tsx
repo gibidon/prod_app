@@ -3,7 +3,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
 import { Button, ThemeButton } from './Button';
-// import 'app/styles/index.scss';
 
 export default {
     title: 'shared/Button',
@@ -13,6 +12,7 @@ export default {
     },
 } as ComponentMeta<typeof Button>;
 
+// eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});

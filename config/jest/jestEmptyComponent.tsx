@@ -1,5 +1,4 @@
-import React from 'react';
-
+// eslint-disable-next-line
 const jestEmptyComponent = function () {
     return <div />;
 };

@@ -3,11 +3,13 @@ import { MainPage } from 'pages/MainPage';
 import { AboutPage } from 'pages/AboutPage';
 import { NotFoundPage } from 'pages/NotFoundPage';
 
+/* eslint-disable no-unused-vars */
 export enum AppRoutes {
     MAIN = 'main',
     ABOUT = 'about',
     NOT_FOUND = 'not_found'
 }
+/* eslint-disable no-unused-vars */
 
 export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.MAIN]: '/',

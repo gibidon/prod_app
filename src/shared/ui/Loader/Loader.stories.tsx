@@ -14,6 +14,7 @@ export default {
     },
 } as ComponentMeta<typeof Loader>;
 
+// eslint-disable-next-line
 const Template: ComponentStory<typeof Loader> = (args) => <Loader {...args} />;
 
 export const Light = Template.bind({});
