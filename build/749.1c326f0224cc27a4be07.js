@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkulbi_my_project=self.webpackChunkulbi_my_project||[]).push([[749],{749:(e,u,r)=>{r.r(u),r.d(u,{default:()=>a});var t=r(848),c=r(142);function a(){var e=(0,c.B)("about").t;return(0,t.jsx)("div",{children:e("О сайте")})}}}]);
