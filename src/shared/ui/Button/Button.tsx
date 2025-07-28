@@ -4,11 +4,11 @@ import cls from './Button.module.scss';
 
 /* eslint-disable no-unused-vars */
 export enum ButtonTheme {
-    CLEAR = 'clear',
+   CLEAR = 'clear',
+    CLEAR_INVERTED = 'clearInverted',
     OUTLINE = 'outline',
     BACKGROUND = 'background',
-    BACKGROUND_INVERTED = 'backgroundInverted'
-
+    BACKGROUND_INVERTED = 'backgroundInverted',
 }
 /* eslint-disable no-unused-vars */
 

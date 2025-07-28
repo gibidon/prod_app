@@ -119,3 +119,9 @@ SquareSizeXL.args = {
     square: true,
     size: ButtonSize.XL,
 };
+
+export const ClearInverted = Template.bind({});
+ClearInverted.args = {
+    children: 'text',
+    theme: ButtonTheme.CLEAR_INVERTED,
+};

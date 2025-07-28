@@ -4,7 +4,6 @@ import { Sidebar } from 'widgets/Sidebar';
 import { Suspense } from 'react';
 import { AppRouter } from './providers/router';
 import { classNames } from '../shared/config/lib/classNames/classNames';
-import './styles/index.scss';
 
 export function App() {
     const { theme } = useTheme();
@@ -13,6 +12,7 @@ export function App() {
         <div className={classNames('app', {}, [theme])}>
             <Suspense fallback="">
                 <Navbar />
+
                 <div className="content-page">
                     <Sidebar />
                     <AppRouter />
