@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkulbi_my_project=self.webpackChunkulbi_my_project||[]).push([[797],{797:(e,r,u)=>{u.r(r),u.d(r,{default:()=>i});var s=u(848),t=u(980),c=u(142);function i(){var e=(0,c.B)("main").t;return(0,s.jsxs)("div",{children:[e("Главная страница"),(0,s.jsx)(t.p,{})]})}}}]);

@@ -10,7 +10,7 @@ interface ModalProps {
     className?: string;
     children?: ReactNode;
     isOpen?: boolean;
-    target: HTMLElement
+    target?: HTMLElement
     onClose?: () => void;
 }
 
