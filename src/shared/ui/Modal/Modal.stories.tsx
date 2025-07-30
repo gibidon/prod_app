@@ -12,7 +12,8 @@ export default {
 } as ComponentMeta<typeof Modal>;
 
 // eslint-disable-next-line react/jsx-props-no-spreading
-const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
+// const Template: ComponentStory<typeof Modal> = (args) => <Modal {...args} />;
+const Template: ComponentStory<typeof Modal> = (args) => <Modal target={document.getElementById('root')} {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
