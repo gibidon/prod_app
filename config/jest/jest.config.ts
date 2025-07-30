@@ -17,6 +17,9 @@ const config: Config.InitialOptions = {
     modulePaths: [
         '<rootDir>src',
     ],
+    globals: {
+        __IS_DEV__: true,
+    },
 
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
