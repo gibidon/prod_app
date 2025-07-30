@@ -7,6 +7,7 @@ import { classNames } from '../shared/config/lib/classNames/classNames';
 
 export function App() {
     const { theme } = useTheme();
+    console.log('theme: ', theme);
 
     return (
         <div className={classNames('app', {}, [theme])}>
