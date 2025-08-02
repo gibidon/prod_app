@@ -12,6 +12,7 @@ interface ModalProps {
     isOpen?: boolean;
     target?: HTMLElement
     onClose?: () => void;
+    lazy?: boolean
 }
 
 const ANIMATION_DELAY = 300;
@@ -23,9 +24,12 @@ export const Modal = (props: ModalProps) => {
         target = document.querySelector('body'),
         isOpen,
         onClose,
+        lazy,
     } = props;
+    console.log('modal load');
 
     const [isClosing, setIsClosing] = useState(false);
+    const [isMounted, setIsMounted] = useState(false);
     const timerRef = useRef<ReturnType<typeof setTimeout>>();
     const { theme } = useTheme();
 
@@ -64,6 +68,14 @@ export const Modal = (props: ModalProps) => {
         [cls.opened]: isOpen,
         [cls.isClosing]: isClosing,
     };
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, [isOpen]);
+
+    if (lazy && !isMounted) {
+        return null;
+    }
 
     return (
         <Portal element={target}>
