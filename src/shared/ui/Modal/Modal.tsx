@@ -26,7 +26,6 @@ export const Modal = (props: ModalProps) => {
         onClose,
         lazy,
     } = props;
-    console.log('modal load');
 
     const [isClosing, setIsClosing] = useState(false);
     const [isMounted, setIsMounted] = useState(false);

@@ -25,6 +25,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   theme?: ButtonTheme
   square?: boolean
   size?: ButtonSize
+  disabled?: boolean
 }
 
 export const Button = (props: ButtonProps) => {
@@ -34,6 +35,7 @@ export const Button = (props: ButtonProps) => {
         children,
         square,
         size = ButtonSize.M,
+        disabled,
         ...otherProps
     } = props;
 
@@ -41,12 +43,14 @@ export const Button = (props: ButtonProps) => {
         [cls[theme]]: true,
         [cls.square]: square,
         [cls[size]]: true,
+        [cls.disabled]: disabled,
     };
 
     return (
         <button
             type="button"
             className={classNames(cls.Button, mods, [className, cls[theme]])}
+            disabled={disabled}
             // eslint-disable-next-line
             {...otherProps}
         >
