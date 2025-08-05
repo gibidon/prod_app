@@ -52,6 +52,17 @@ export const Modal = (props: ModalProps) => {
         e.stopPropagation();
     };
 
+    const mods: Record<string, boolean> = {
+        [cls.opened]: isOpen,
+        [cls.isClosing]: isClosing,
+    };
+
+    useEffect(() => {
+        if (isOpen) {
+            setIsMounted(true);
+        }
+    }, [isOpen]);
+
     useEffect(() => {
         if (isOpen) {
             window.addEventListener('keydown', onKeyDown);
@@ -62,15 +73,6 @@ export const Modal = (props: ModalProps) => {
             window.removeEventListener('keydown', onKeyDown);
         };
     }, [isOpen, onKeyDown]);
-
-    const mods: Record<string, boolean> = {
-        [cls.opened]: isOpen,
-        [cls.isClosing]: isClosing,
-    };
-
-    useEffect(() => {
-        setIsMounted(true);
-    }, [isOpen]);
 
     if (lazy && !isMounted) {
         return null;
