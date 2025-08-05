@@ -15,10 +15,16 @@ export default {
 // eslint-disable-next-line react/jsx-props-no-spreading
 const Template: ComponentStory<typeof LoginForm> = (args) => <LoginForm {...args} />;
 
+// export const Primary = Template.bind({});
+// Primary.args = {};
+// Primary.decorators = [StoreDecorator({
+//     loginForm: { username: '123', password: '123', isLoading: false },
+// })];
+
 export const Primary = Template.bind({});
 Primary.args = {};
 Primary.decorators = [StoreDecorator({
-    loginForm: { username: '123', password: '123', isLoading: false },
+    loginForm: { username: '123', password: 'asd' },
 })];
 
 export const Dark = Template.bind({});
