@@ -1,7 +1,7 @@
 import { fireEvent, screen } from '@testing-library/react';
 // import { withTranslation } from 'react-i18next';
 // import { renderWithtranslation } from 'shared/config/lib/tests/renderWithTranslation';
-import { componentRender } from 'shared/config/lib/tests/componentRender';
+import { componentRender } from 'shared/config/lib/tests/componentRender/componentRender';
 import { Sidebar } from './Sidebar';
 
 describe('Sidebar', () => {

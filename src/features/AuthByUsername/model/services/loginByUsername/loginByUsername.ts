@@ -23,6 +23,7 @@ export const loginByUsername = createAsyncThunk<User, LoginByUsernameProps, {rej
 
             return response.data;
         } catch (error) {
+            // eslint-disable-next-line
             console.warn(error);
             return thunkApi.rejectWithValue('Error');
         }
