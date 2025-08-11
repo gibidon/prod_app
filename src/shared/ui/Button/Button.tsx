@@ -1,5 +1,5 @@
 import { classNames } from 'shared/config/lib/classNames/classNames';
-import React, { ButtonHTMLAttributes } from 'react';
+import React, { ButtonHTMLAttributes, memo } from 'react';
 import cls from './Button.module.scss';
 
 /* eslint-disable no-unused-vars */
@@ -28,7 +28,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
   disabled?: boolean
 }
 
-export const Button = (props: ButtonProps) => {
+export const Button = memo((props: ButtonProps) => {
     const {
         className,
         theme = ButtonTheme.CLEAR,
@@ -57,4 +57,4 @@ export const Button = (props: ButtonProps) => {
             {children}
         </button>
     );
-};
+});
