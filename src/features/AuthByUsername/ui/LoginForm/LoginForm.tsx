@@ -49,7 +49,7 @@ const LoginForm = memo(({ className, onSuccess }: LoginFormProps) => {
         if (result.meta.requestStatus === 'fulfilled') {
             onSuccess();
         }
-    }, [dispatch, username, password,onSuccess]);
+    }, [dispatch, username, password, onSuccess]);
 
     return (
         // eslint-disable-next-line

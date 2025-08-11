@@ -1,8 +1,8 @@
 import { classNames } from 'shared/config/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
-import { 
-  DynamicModuleLoader, 
-  ReducersList 
+import {
+    DynamicModuleLoader,
+    ReducersList,
 } from 'shared/config/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { profileReducer } from 'entities/Profile';
 
