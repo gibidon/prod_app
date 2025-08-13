@@ -4,14 +4,14 @@ import { userEvent } from '@storybook/testing-library';
 import { Counter } from './Counter';
 
 describe('Counter', () => {
-    test.skip('should display corect value', () => {
+    test('should display corect value', () => {
         componentRender(<Counter />, {
             initialState: { counter: { value: 10 } },
         });
         expect(screen.getByTestId('value-title')).toHaveTextContent('10');
     });
 
-    test.skip('increment', () => {
+    test('increment', () => {
         componentRender(<Counter />, {
             initialState: { counter: { value: 10 } },
         });
@@ -19,7 +19,7 @@ describe('Counter', () => {
         expect(screen.getByTestId('value-title')).toHaveTextContent('11');
     });
 
-    test.skip('decrement', () => {
+    test('decrement', () => {
         componentRender(<Counter />, {
             initialState: { counter: { value: 10 } },
         });

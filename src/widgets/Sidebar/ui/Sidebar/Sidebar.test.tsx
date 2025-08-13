@@ -3,11 +3,11 @@ import { componentRender } from 'shared/config/lib/tests/componentRender/compone
 import { Sidebar } from './Sidebar';
 
 describe('Sidebar', () => {
-    test.skip('first', () => {
+    test('first', () => {
         componentRender(<Sidebar />);
         expect(screen.getByTestId('sidebar')).toBeInTheDocument();
     });
-    test.skip('test otggle', () => {
+    test('test otggle', () => {
         componentRender(<Sidebar />);
         const toggleBtn = screen.getByTestId('sidebar-toggle');
         const sidebar = screen.getByTestId('sidebar');

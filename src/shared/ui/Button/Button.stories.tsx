@@ -1,4 +1,3 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
@@ -19,28 +18,21 @@ export const Primary = Template.bind({});
 
 Primary.args = {
     children: 'Text',
-    primary: true,
-    label: 'Button',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
     children: 'text',
-    label: 'Button',
 };
 
 export const Large = Template.bind({});
 Large.args = {
     children: 'text',
-    size: 'large',
-    label: 'Button',
 };
 
 export const Small = Template.bind({});
 Small.args = {
     children: 'text',
-    size: 'small',
-    label: 'Button',
 };
 
 export const Outlined = Template.bind({});
