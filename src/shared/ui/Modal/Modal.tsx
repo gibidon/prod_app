@@ -11,7 +11,7 @@ interface ModalProps {
     className?: string;
     children?: ReactNode;
     isOpen?: boolean;
-    target?: HTMLElement
+    // target?: HTMLElement
     onClose?: () => void;
     lazy?: boolean
 }
@@ -22,7 +22,7 @@ export const Modal = (props: ModalProps) => {
     const {
         className,
         children,
-        target = document.querySelector('body'),
+        // target = document.querySelector('body'),
         isOpen,
         onClose,
         lazy,

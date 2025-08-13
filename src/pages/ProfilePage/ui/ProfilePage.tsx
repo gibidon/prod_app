@@ -1,5 +1,4 @@
 import { classNames } from 'shared/config/lib/classNames/classNames';
-import { useTranslation } from 'react-i18next';
 import {
     DynamicModuleLoader,
     ReducersList,
@@ -17,7 +16,6 @@ interface ProfilePageProps {
 }
 
 const ProfilePage = ({ className }: ProfilePageProps) => {
-    const { t } = useTranslation('main');
     const dispatch = useAppDispatch();
 
     useEffect(() => {
