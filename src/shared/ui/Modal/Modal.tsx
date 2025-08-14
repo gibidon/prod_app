@@ -11,7 +11,7 @@ interface ModalProps {
     className?: string;
     children?: ReactNode;
     isOpen?: boolean;
-    // target?: HTMLElement
+    target?: HTMLElement
     onClose?: () => void;
     lazy?: boolean
 }
@@ -22,7 +22,7 @@ export const Modal = (props: ModalProps) => {
     const {
         className,
         children,
-        // target = document.querySelector('body'),
+        target,
         isOpen,
         onClose,
         lazy,
@@ -80,7 +80,7 @@ export const Modal = (props: ModalProps) => {
     }
 
     return (
-        <Portal element={document.body}>
+        <Portal element={target}>
             <div className={classNames(cls.Modal, mods, [className, theme, 'app_modal'])}>
                 <div className={cls.overlay} onClick={closeHandler}>
                     <div
